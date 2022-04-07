@@ -1,3 +1,13 @@
+[![Version 1.0.0](https://i.ibb.co/6vJvwyf/5.png "Version 1.0.0")](https://github.com/alipbudiman/CL-Assist-Ajs-V2)
+[![LICENSE](https://i.ibb.co/5nR4p7x/6.png "LICENSE")](https://github.com/alipbudiman/CL-Assist-Ajs-V2/blob/main/LICENSE)
+[![Supported python versions: 3.x](https://i.ibb.co/L1k6BC2/7.png "supported python versions: 3.x")](https://www.python.org/downloads/)
+[![Contact Author](https://i.ibb.co/xCDRtJs/8.png "contact author")](https://fxgdev.site/alifbudiman.html)
+
+
+
+
+# ![logo](https://i.ibb.co/zJvVhJ3/Untitled-design-88.png)
+
 # CL-Assist-V2
 
 **Unoffcial LINE bot**. Using LINE private API for automate some task in LINE chat.
@@ -53,10 +63,25 @@ You can imput your mid and other mid into list
 
 Bot will not be able to run if you leave Creator and Owner empty.
 
-Owner will get more access than Creator* (**TBA*)
+Owner will get more access than Creator(**TBA*)
 
 ## 3. Run your script
 This script running using python3
 ```SH
 python3 main.py
 ```
+Note: Kill, Nuke, Nuke Join fiture using JS-Node. So you need install JS-node to.
+# Casing
+
+
+Author by [Alip Budiman](https://fxgdev.site/alifbudiman.html)
+
+You can contact me if have a question or want to help this repo :)
+
+You can visit my website to, [www.fxgdev.site](https://fxgdev.site/)
+
+# Credit
+
+Basic library from: [herywinarto/SIMPLE-PROTECTV2](https://github.com/herywinarto/SIMPLE-PROTECTV2)
+
+Super Split Logic from: [ii64/Archimed](https://github.com/ii64/Archimed)
