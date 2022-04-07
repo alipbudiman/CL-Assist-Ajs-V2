@@ -57,7 +57,9 @@ This script under [**MIT LICENSE**](https://github.com/alipbudiman/CL-Assist-Ajs
   - View Group List
 
 - Ajs
-  - run Ajs from Assist
+  - Run Ajs from Assist
+  - Ajs Stay / Denay
+  - Ajs In (WIP)
   - Ajs Backup
 
 - Basic
@@ -65,7 +67,7 @@ This script under [**MIT LICENSE**](https://github.com/alipbudiman/CL-Assist-Ajs
   - Restart Bot
   - Out / Out All from Group
 
-And Others (Ongoing).
+And Others (WIP).
 
 # How to run bot?
 
