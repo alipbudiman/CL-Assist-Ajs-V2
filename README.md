@@ -8,7 +8,7 @@
 
 # ![logo](https://i.ibb.co/zJvVhJ3/Untitled-design-88.png)
 
-# CL-Assist-V2
+# CL-Assist-Ajs-V2
 
 **Unoffcial LINE bot**. Using LINE private API for automate some task in LINE chat.
 
