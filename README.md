@@ -139,6 +139,8 @@ Please don't sell this script and APPRECIATE me
 ## Special Thanks:
 Basic library from: [herywinarto/SIMPLE-PROTECTV2](https://github.com/herywinarto/SIMPLE-PROTECTV2)
 
+Convert Primary token from: [hert0t/BEAPI-BETA](https://github.com/hert0t/BEAPI-BETA)
+
 Super Split Logic from: [ii64/Archimed](https://github.com/ii64/Archimed)
 
 Testing & Help by: [Farell](https://linevoom.line.me/user/_dcv_AGGnHXsTxgZeXYgF9BHglwLue2dng59xdeQ)
