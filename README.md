@@ -148,3 +148,16 @@ Testing & Help by: [Farell](https://linevoom.line.me/user/_dcv_AGGnHXsTxgZeXYgF9
 ## Author:
 [Alip/Alif Budiman](https://fxgdev.site/alifbudiman.html)
 
+
+
+
+
+
+
+
+
+
+
+
+
+my english is bad :v
