@@ -12,7 +12,7 @@
 
 **Unoffcial LINE bot**. Using LINE private API for automate some task in LINE chat.
 
-**Please Note**, this is using Unoffcial library, wich is **ILLEGAL**. so use use wisely
+**Please Note**, this is using Unoffcial library, wich is **ILLEGAL**. so use wisely
 
 This script under [**MIT LICENSE**](https://github.com/alipbudiman/CL-Assist-Ajs-V2/blob/main/LICENSE).
 **NOT FOR SALE!!**
