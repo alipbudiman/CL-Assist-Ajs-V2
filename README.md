@@ -15,9 +15,7 @@
 **Please Note**, this is using Unoffcial library, wich is **ILLEGAL**. so use wisely
 
 This script under [**MIT LICENSE**](https://github.com/alipbudiman/CL-Assist-Ajs-V2/blob/main/LICENSE).
-```diff
-- **NOT FOR SALE!!**
-```
+**NOT FOR SALE!!** `#f03c15`
 
 You can use the diff language tag to generate some colored text:
 # Features
