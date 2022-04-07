@@ -1,4 +1,4 @@
-[![Version 1.0.0](https://i.ibb.co/6vJvwyf/5.png "Version 1.0.0")](https://github.com/alipbudiman/CL-Assist-Ajs-V2)
+[![Version 1.0.0](https://i.ibb.co/6vJvwyf/5.png "Version 1.0.0")](https://github.com/alipbudiman/CL-Assist-Ajs-V2/blob/main/README.md#cl-assist-ajs-v2)
 [![LICENSE](https://i.ibb.co/5nR4p7x/6.png "LICENSE")](https://github.com/alipbudiman/CL-Assist-Ajs-V2/blob/main/LICENSE)
 [![Supported python versions: 3.x](https://i.ibb.co/L1k6BC2/7.png "supported python versions: 3.x")](https://www.python.org/downloads/)
 [![Contact Author](https://i.ibb.co/xCDRtJs/8.png "contact author")](https://fxgdev.site/alifbudiman.html)
