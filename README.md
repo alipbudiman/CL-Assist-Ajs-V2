@@ -8,6 +8,7 @@
 
 
 # CL-Assist-Ajs-V2
+
 **Unoffcial LINE bot**. Using LINE private API for automate some task in LINE chat.
 
 **Please Note**, this is using Unoffcial library, wich is **ILLEGAL**. so use wisely
@@ -17,7 +18,6 @@ This script under [**MIT LICENSE**](https://github.com/alipbudiman/CL-Assist-Ajs
 
 
 # How to run bot?
-
 
 ## 1. Add Primary Token into JSON
 First input your token into file > statusalip.json
@@ -77,6 +77,7 @@ Note: Kill, Nuke, Nuke Join fiture using JS-Node. So you need install JS-node to
 
 
 # Casing
+
 You can contact me if have a question or want to help this repo :)
 
 You can visit my website to, [www.fxgdev.site](https://fxgdev.site/)
@@ -85,6 +86,7 @@ Please don't sell this script and APPRECIATE me
 
 
 # Credit
+
 ## Special Thanks:
 Basic library from: [herywinarto/SIMPLE-PROTECTV2](https://github.com/herywinarto/SIMPLE-PROTECTV2)
 
@@ -93,5 +95,5 @@ Super Split Logic from: [ii64/Archimed](https://github.com/ii64/Archimed)
 Testing & Help by: [Farell](https://linevoom.line.me/user/_dcv_AGGnHXsTxgZeXYgF9BHglwLue2dng59xdeQ)
 
 ## Author:
-[Alip / AlipBudiman](https://i.ibb.co/xCDRtJs/8.png "contact author")](https://fxgdev.site/alifbudiman.html)
+[Alip/Alif Budiman](https://fxgdev.site/alifbudiman.html)
 
