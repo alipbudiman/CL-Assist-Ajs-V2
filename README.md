@@ -16,6 +16,53 @@
 This script under [**MIT LICENSE**](https://github.com/alipbudiman/CL-Assist-Ajs-V2/blob/main/LICENSE).
 **NOT FOR SALE!!**
 
+# Fitur
+- Banning
+  - Auto Purge Blacklist
+  - Add Blacklist
+  - Auot Blacklist
+  - Delete And Add Blacklist
+  - View Blacklist
+  - Other
+
+- Backup
+  - Add Whitelist (Add Bot)
+  - Delete Whitelist
+  - Backup Whitelist
+  - View Whitelist
+  - Backup Owner & Creator
+
+- Kick
+  - Kick / Kill
+  - Kickall
+  - Join & Kickall
+ 
+- Protect
+  - Protect Kick
+  - Protect Cancel
+  - Protect Invite
+  - Protect Join
+  - Protect QR Group
+  - View List Protect
+
+- Profile
+  - Update Pict
+  - Update Cover
+  - Update Name
+  - Update Bio
+  - Add Key
+  - Remove Key
+  - View Group List
+
+- Ajs
+  - run Ajs from Assist
+  - Ajs Backup
+
+- Basic
+  - Debug Speed
+  - Restart Bot
+  - Out / Out All from Group
+
 
 # How to run bot?
 
