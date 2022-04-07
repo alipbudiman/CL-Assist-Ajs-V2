@@ -14,6 +14,9 @@
 
 **Please Note**, this is using Unoffcial library, wich is **ILLEGAL**. so use use wisely
 
+This script under [**MIT LICENSE**](https://github.com/alipbudiman/CL-Assist-Ajs-V2/blob/main/LICENSE).
+**NOT FOR SALE!!**
+
 
 # How to run bot?
 
