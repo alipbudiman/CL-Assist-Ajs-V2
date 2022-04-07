@@ -8,6 +8,7 @@
 
 
 # CL-Assist-Ajs-V2
+## Version 1.0.0
 
 **Unoffcial LINE bot**. Using LINE private API for automate some task in LINE chat.
 
@@ -16,7 +17,7 @@
 This script under [**MIT LICENSE**](https://github.com/alipbudiman/CL-Assist-Ajs-V2/blob/main/LICENSE).
 **NOT FOR SALE!!**
 
-# Fitur
+# Features
 - Banning
   - Auto Purge Blacklist
   - Add Blacklist
@@ -63,6 +64,7 @@ This script under [**MIT LICENSE**](https://github.com/alipbudiman/CL-Assist-Ajs
   - Restart Bot
   - Out / Out All from Group
 
+And Others (Ongoing).
 
 # How to run bot?
 
