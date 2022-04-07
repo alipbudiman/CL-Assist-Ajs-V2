@@ -15,8 +15,11 @@
 **Please Note**, this is using Unoffcial library, wich is **ILLEGAL**. so use wisely
 
 This script under [**MIT LICENSE**](https://github.com/alipbudiman/CL-Assist-Ajs-V2/blob/main/LICENSE).
-**NOT FOR SALE!!**
+```diff
+- **NOT FOR SALE!!**
+```
 
+You can use the diff language tag to generate some colored text:
 # Features
 - Banning
   - Auto Purge Blacklist
