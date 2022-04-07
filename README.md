@@ -16,10 +16,8 @@
 
 This script under [**MIT LICENSE**](https://github.com/alipbudiman/CL-Assist-Ajs-V2/blob/main/LICENSE).
 **NOT FOR SALE!!**
-`diff
-- text in red
-`
-You can use the diff language tag to generate some colored text:
+
+
 # Features
 - Banning
   - Auto Purge Blacklist
