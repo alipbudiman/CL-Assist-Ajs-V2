@@ -4,9 +4,8 @@
 [![Contact Author](https://i.ibb.co/xCDRtJs/8.png "contact author")](https://fxgdev.site/alifbudiman.html)
 
 
-
-
 # ![logo](https://i.ibb.co/zJvVhJ3/Untitled-design-88.png)
+
 
 # CL-Assist-Ajs-V2
 
@@ -19,6 +18,7 @@ This script under [**MIT LICENSE**](https://github.com/alipbudiman/CL-Assist-Ajs
 
 
 # How to run bot?
+
 
 ## 1. Add Primary Token into JSON
 First input your token into file > statusalip.json
@@ -41,6 +41,7 @@ If you want run AJS (Anti-js) or Pending bots for backup your Assist. You need t
 Please note, **you must input Token into value of assistToken** for run this bot. but you are **free to input Token into value of ajsToken**.
 
 if You if you don't put the token in the value of ajsToken, then your bot will run as Single Assist.
+
 
 ## 2. Add Mid Token into JSON
 
@@ -68,6 +69,7 @@ Bot will not be able to run if you leave Creator and Owner empty.
 
 Owner will get more access than Creator(**TBA*)
 
+
 ## 3. Run your script
 This script running using python3
 ```SH
@@ -83,8 +85,17 @@ You can contact me if have a question or want to help this repo :)
 
 You can visit my website to, [www.fxgdev.site](https://fxgdev.site/)
 
+
 # Credit
 
+## Special Thanks:
 Basic library from: [herywinarto/SIMPLE-PROTECTV2](https://github.com/herywinarto/SIMPLE-PROTECTV2)
 
 Super Split Logic from: [ii64/Archimed](https://github.com/ii64/Archimed)
+
+[Farell](line://nv/profilePopup/mid=ufd893b8ea63bfab57907fa72f7bcb1f0)
+
+
+## Author:
+[Alip / AlipBudiman](https://i.ibb.co/xCDRtJs/8.png "contact author")](https://fxgdev.site/alifbudiman.html)
+
