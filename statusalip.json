@@ -1,0 +1,18 @@
+{
+    "Owner":[],
+    "Creator":[],
+    "Blacklist": [],
+    "Bots": [],
+    "ajsSecondary": "",
+    "ajsToken": "",
+    "assistSecondary": "",
+    "assistToken": "",
+    "headers": "CHROMEOS\t2.4.9\tChrome OS\t1",
+    "protect": {
+        "cancel": [],
+        "invite": [],
+        "join": [],
+        "kick": [],
+        "qr": []
+    }
+}
