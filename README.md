@@ -147,6 +147,12 @@ Testing & Help by: [Farell](https://linevoom.line.me/user/_dcv_AGGnHXsTxgZeXYgF9
 
 ## Author:
 [Alip/Alif Budiman](https://fxgdev.site/alifbudiman.html)
+```
+
+
+
+
+
 
 
 
@@ -161,3 +167,4 @@ Testing & Help by: [Farell](https://linevoom.line.me/user/_dcv_AGGnHXsTxgZeXYgF9
 
 
 my english is bad :v
+```
