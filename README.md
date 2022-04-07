@@ -90,7 +90,7 @@ Basic library from: [herywinarto/SIMPLE-PROTECTV2](https://github.com/herywinart
 
 Super Split Logic from: [ii64/Archimed](https://github.com/ii64/Archimed)
 
-Testing & Help: [Farell](line://nv/profilePopup/mid=ufd893b8ea63bfab57907fa72f7bcb1f0)
+Testing & Help by: [Farell](https://linevoom.line.me/user/_dcv_AGGnHXsTxgZeXYgF9BHglwLue2dng59xdeQ)
 
 ## Author:
 [Alip / AlipBudiman](https://i.ibb.co/xCDRtJs/8.png "contact author")](https://fxgdev.site/alifbudiman.html)
