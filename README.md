@@ -8,7 +8,6 @@
 
 
 # CL-Assist-Ajs-V2
-
 **Unoffcial LINE bot**. Using LINE private API for automate some task in LINE chat.
 
 **Please Note**, this is using Unoffcial library, wich is **ILLEGAL**. so use wisely
@@ -44,7 +43,6 @@ if You if you don't put the token in the value of ajsToken, then your bot will r
 
 
 ## 2. Add Mid Token into JSON
-
 For reconize operatior of this bot, you need input mid into file > statusalip.json
 
 mid same as id, but for server. You can get your mid with Sniffing, Using other bot or if you need help you can contact me on [LINE](https://line.me/ti/p/~alip_budiman)
@@ -76,25 +74,23 @@ This script running using python3
 python3 main.py
 ```
 Note: Kill, Nuke, Nuke Join fiture using JS-Node. So you need install JS-node to.
+
+
 # Casing
-
-
-Author by [Alip Budiman](https://fxgdev.site/alifbudiman.html)
-
 You can contact me if have a question or want to help this repo :)
 
 You can visit my website to, [www.fxgdev.site](https://fxgdev.site/)
 
+Please don't sell this script and APPRECIATE me
+
 
 # Credit
-
 ## Special Thanks:
 Basic library from: [herywinarto/SIMPLE-PROTECTV2](https://github.com/herywinarto/SIMPLE-PROTECTV2)
 
 Super Split Logic from: [ii64/Archimed](https://github.com/ii64/Archimed)
 
-[Farell](line://nv/profilePopup/mid=ufd893b8ea63bfab57907fa72f7bcb1f0)
-
+Testing & Help: [Farell](line://nv/profilePopup/mid=ufd893b8ea63bfab57907fa72f7bcb1f0)
 
 ## Author:
 [Alip / AlipBudiman](https://i.ibb.co/xCDRtJs/8.png "contact author")](https://fxgdev.site/alifbudiman.html)
