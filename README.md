@@ -144,7 +144,7 @@ Convert Primary token from: [hert0t/BEAPI-BETA](https://github.com/hert0t/BEAPI-
 
 Super Split Logic from: [ii64/Archimed](https://github.com/ii64/Archimed)
 
-Testing & Help by: [Farell](https://github.com/Whynotfarell)
+Testing & Help by: [Whynotfarell](https://github.com/Whynotfarell)
 
 ## Author:
 [Alip/Alif Budiman](https://fxgdev.site/alifbudiman.html)
