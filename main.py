@@ -1119,7 +1119,7 @@ def RunningThreadPollExecutor():
                 sys.exit("##---- KEYBOARD INTERRUPT -----##")
     else:
         with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
-            print("Multi Singel Thread with Singel Assist mode")
+            print("Multi Thread with Singel Assist mode")
             while True:
                 try:
                     ops = alip.fetchOps()
