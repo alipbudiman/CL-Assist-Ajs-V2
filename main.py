@@ -20,8 +20,14 @@ from function import *
 
 statusalip = livejson.File("statusalip.json", True, True, 4)
 
-hostt = "https://api.coursehero.store"
-VersionBot = "1.0.0"
+hostt = "https://api.chstore.me/v1"
+Access_key = "" # << masukan api key di sini, dapatkan api key nya di sini https://api.chstore.me
+VersionBot = "1.2.0"
+
+if Access_key == "":
+    sys.exit(
+        "Access_key tidak boleh kosong, masukan apikey dalam Access_key terlebih dahulu, dapatkan api key di https://api.chstore.me"
+    )
 
 if statusalip["assistToken"] == "":
     sys.exit(
@@ -30,8 +36,8 @@ if statusalip["assistToken"] == "":
 
 
 def ConvPrim(token, header):
-    params = {"appname": header, "authtoken": token}
-    resp = requests.get(hostt + "/lineprimary2secondary", params=params).json()
+    params = {"appname": header, "authtoken": token, "apikey":Access_key}
+    resp = requests.session().get(hostt + "/lineprimary2secondary", params=params).json()
     if resp["status"] != 200:
         raise Exception(resp["reason"])
     return resp["result"]["token"]
