@@ -8,13 +8,14 @@
 
 
 # CL-Assist-Ajs-V2
-## Version 1.0.0
+## Version 1.2.0
 
 **Unoffcial LINE bot**. Using LINE private API for automate some task in LINE chat.
 
 **Please Note**, this is using Unoffcial library, wich is **ILLEGAL**. so use wisely
 
 This script under [**MIT LICENSE**](https://github.com/alipbudiman/CL-Assist-Ajs-V2/blob/main/LICENSE).
+
 **NOT FOR SALE!!**
 
 
@@ -142,7 +143,7 @@ Please don't sell this script and APPRECIATE me
 ## Special Thanks:
 Basic library from: [herywinarto/SIMPLE-PROTECTV2](https://github.com/herywinarto/SIMPLE-PROTECTV2)
 
-Convert Primary token from: [hert0t/BEAPI-BETA](https://github.com/hert0t/BEAPI-BETA)
+Convert Primary token from: [hert0t/API-DOC](https://github.com/hert0t/API-DOC)
 
 Super Split Logic from: [ii64/Archimed](https://github.com/ii64/Archimed)
 
