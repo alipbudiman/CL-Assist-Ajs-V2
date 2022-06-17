@@ -120,6 +120,18 @@ Bot will not be able to run if you leave Creator and Owner empty.
 
 Owner will get more access than Creator(**TBA*)
 
+** NEED API FOR CONVERT PRIMARY TOKEN TO SECONDARY **
+
+https://github.com/alipbudiman/CL-Assist-Ajs-V2/blob/1f387092248e29d137c35bfae8e5f9921a0b47fe/main.py#L23-L25
+
+for converting token, you need put your api-key.
+
+You can get api key from https://api.chstore.me
+
+FREE 200 api-request for new user
+
+https://github.com/alipbudiman/CL-Assist-Ajs-V2/blob/5efb0b993c671508d28beef0f17d8e6d42a07209/main.py
+
 
 ## 3. Run your script
 This script running using python3
