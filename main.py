@@ -21,7 +21,7 @@ from function import *
 statusalip = livejson.File("statusalip.json", True, True, 4)
 
 hostt = "https://api.chstore.me/v1"
-Access_key = "" # << masukan api key di sini, dapatkan api key nya di sini https://api.chstore.me
+Access_key = "" # << input apikey here, get api key on https://api.chstore.me
 VersionBot = "1.2.0"
 
 if Access_key == "":
