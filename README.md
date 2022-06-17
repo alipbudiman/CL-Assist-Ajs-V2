@@ -130,7 +130,7 @@ You can get api key from https://api.chstore.me
 
 FREE 200 api-request for new user
 
-[**VIEW SOURCE CODE**]([https://github.com/alipbudiman/CL-Assist-Ajs-V2/blob/main/LICENSE](https://github.com/alipbudiman/CL-Assist-Ajs-V2/blob/1f387092248e29d137c35bfae8e5f9921a0b47fe/main.py#L23-L25))
+[**VIEW SOURCE CODE**](https://github.com/alipbudiman/CL-Assist-Ajs-V2/blob/main/LICENSE](https://github.com/alipbudiman/CL-Assist-Ajs-V2/blob/1f387092248e29d137c35bfae8e5f9921a0b47fe/main.py#L23-L25)
 
 
 ## 3. Run your script
