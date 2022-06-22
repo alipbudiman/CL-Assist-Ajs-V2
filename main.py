@@ -140,9 +140,6 @@ def command(text, msg_from):
         else:
             cmd = ""
         return cmd
-    else:
-        cmd = pesan.replace(pesan, "")
-        return pesan
 
 
 def sendMentionv2(to, text="", mids=[]):
