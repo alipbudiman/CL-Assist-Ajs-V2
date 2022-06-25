@@ -60,7 +60,7 @@ This script under [**MIT LICENSE**](https://github.com/alipbudiman/CL-Assist-Ajs
 - Ajs
   - Run Ajs from Assist
   - Ajs Stay / Denay
-  - Ajs In (WIP)
+  - Ajs In
   - Ajs Backup
 
 - Basic
@@ -162,24 +162,5 @@ Testing & Help by: [Whynotfarell](https://github.com/Whynotfarell)
 ## Author:
 [Alip/Alif Budiman](https://fxgdev.site/alifbudiman.html)
 
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-my english is bad :v
-```
+# Donation:
+https://saweria.co/alipbudiman
