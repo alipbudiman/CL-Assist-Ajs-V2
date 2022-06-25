@@ -780,7 +780,7 @@ def RECEIVE_MESSAGE(op):
 
                     elif cmd == "ajs stay":
                         if ajsMID:
-                            G = ajs.getChats([to]).chats[0]
+                            G = alip.getChats([to]).chats[0]
                             pends = list(G.extra.groupExtra.inviteeMids)
                             mems = list(G.extra.groupExtra.memberMids)
                             if ajsMID not in pends + mems:
@@ -796,7 +796,7 @@ def RECEIVE_MESSAGE(op):
 
                     elif cmd == "ajs denay":
                         if ajsMID:
-                            G = ajs.getChats([to]).chats[0]
+                            G = alip.getChats([to]).chats[0]
                             pends = list(G.extra.groupExtra.inviteeMids)
                             mems = list(G.extra.groupExtra.memberMids)
                             if ajsMID in pends:
@@ -804,9 +804,23 @@ def RECEIVE_MESSAGE(op):
                             elif ajsMID in mems:
                                 ajs.deleteSelfFromChat(to)
                             elif ajsMID not in pends + mems:
-                                alip.sendMessage(to, "Ajs Not in Stay mode")
+                                alip.inviteIntoChat(to, [ajsMID])
                         else:
                             alip.sendMessage(to, "in Assist mode, Ajs not found")
+                    
+                    elif cmd == "ajs in":
+                        if ajsMID:
+                            G = alip.getChats([to]).chats[0]
+                            pends = list(G.extra.groupExtra.inviteeMids)
+                            mems = list(G.extra.groupExtra.memberMids)
+                            if ajsMID in pends:
+                                ajs.acceptChatInvitation(group)
+                            elif ajsMID in mems:
+                                alip.sendMessage(to, "Ajs Alredy in group")
+                            elif ajsMID not in pends + mems:
+                                alip.inviteIntoChat(to, [ajsMID])
+                                time.sleep(0.8)
+                                ajs.acceptChatInvitation(group)
 
                     elif cmd == "silent on":
                         wait["silent"] = True
