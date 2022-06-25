@@ -40,7 +40,7 @@ def ConvPrim(token, header):
     resp = requests.session().get(hostt + "/lineprimary2secondary", params=params).json()
     if resp["status"] != 200:
         raise Exception(resp["reason"])
-    return resp["result"]["token"]
+    return resp["result"]
 
 
 header = statusalip["headers"]
