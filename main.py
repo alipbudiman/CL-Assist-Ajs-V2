@@ -133,13 +133,14 @@ def restartBot():
 
 
 def command(text, msg_from):
-    pesan = text.lower()
-    if msg_from in alip.FindDuplicatedAndRemove(creator, owner):
-        if pesan.startswith(wait["keyCmd"]):
-            cmd = pesan.replace(wait["keyCmd"], "")
-        else:
-            cmd = ""
-        return cmd
+    if text != None:
+        pesan = text.lower()
+        if msg_from in alip.FindDuplicatedAndRemove(creator, owner):
+            if pesan.startswith(wait["keyCmd"]):
+                cmd = pesan.replace(wait["keyCmd"], "")
+            else:
+                cmd = ""
+            return cmd
 
 
 def sendMentionv2(to, text="", mids=[]):
