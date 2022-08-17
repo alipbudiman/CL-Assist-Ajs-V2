@@ -19,7 +19,7 @@ class LINEBOT:
         self.thisHeaders["x-line-application"] = myApp
         self.thisHeaders["x-lal"] = "en_id"
         if myUAgent != None:
-            self.thisHeaders["User-Agent"] = myUAgent
+            self.thisHeaders["user-agent"] = myUAgent
         else:
             if splited[0] == "ANDROIDLITE":
                 self.thisHeaders["user-agent"] = "LLA/{} Mi5 {}".format(
