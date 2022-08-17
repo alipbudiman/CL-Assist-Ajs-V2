@@ -7,8 +7,7 @@
     "ajsToken": "",
     "assistSecondary": "",
     "assistToken": "",
-    "certassist":"",
-    "certajs":"",
+    "headersAjs":"DESKTOPWIN\t7.8.0\tLAPTOP-RC775HQZ\t7",
     "headers": "CHROMEOS\t2.4.9\tChrome OS\t1",
     "protect": {
         "cancel": [],
