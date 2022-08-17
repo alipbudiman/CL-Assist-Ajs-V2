@@ -11,7 +11,7 @@
     "userAgentAjs":"",
     "headersAssist":"",
     "userAgentAssist":"",
-    "headers": "CHROMEOS",
+    "headers": "chromeos",
     "protect": {
         "cancel": [],
         "invite": [],
