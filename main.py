@@ -23,7 +23,7 @@ MYUAGENTLIST = ["Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like
 
 hostt = "https://api.chstore.me/v1"
 Access_key = "" # << input apikey here, get api key on https://api.chstore.me
-VersionBot = "1.2.0"
+VersionBot = "1.3.0"
 
 if Access_key == "":
     sys.exit(
