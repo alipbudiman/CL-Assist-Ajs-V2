@@ -36,7 +36,8 @@ This script under [**MIT LICENSE**](https://github.com/alipbudiman/CL-Assist-Ajs
   - Backup Owner & Creator
 
 - Kick
-  - Kick / Kill
+  - Kick (Python kick)
+  - Kill (Js kick)
   - Kickall
   - Join & Kickall
  
@@ -67,6 +68,9 @@ This script under [**MIT LICENSE**](https://github.com/alipbudiman/CL-Assist-Ajs
   - Debug Speed
   - Restart Bot
   - Out / Out All from Group
+
+- Login
+  - Random Header
 
 And Others (WIP).
 
