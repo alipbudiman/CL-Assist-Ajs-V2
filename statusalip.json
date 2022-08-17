@@ -7,8 +7,11 @@
     "ajsToken": "",
     "assistSecondary": "",
     "assistToken": "",
-    "headersAjs":"CHROMEOS\t2.4.1\tChrome OS\t1",
-    "headers": "CHROMEOS\t2.4.9\tChrome OS\t1",
+    "headersAjs":"",
+    "userAgentAjs":"",
+    "headersAssist":"",
+    "userAgentAssist":"",
+    "headers": "CHROMEOS",
     "protect": {
         "cancel": [],
         "invite": [],

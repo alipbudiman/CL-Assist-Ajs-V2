@@ -15,10 +15,11 @@ Visit our website:
 
 """
 
-
 from function import *
 
 statusalip = livejson.File("statusalip.json", True, True, 4)
+MYAPPLIST = ["CHROMEOS\t2.4.1\tChrome OS\t1","CHROMEOS\t2.4.3\tChrome OS\t1","CHROMEOS\t2.4.4\tChrome OS\t1","CHROMEOS\t2.4.5\tChrome OS\t1","CHROMEOS\t2.4.6\tChrome OS\t1","CHROMEOS\t2.4.7\tChrome OS\t1","CHROMEOS\t2.4.8\tChrome OS\t1","CHROMEOS\t2.4.9\tChrome OS\t1","CHROMEOS\t2.4.10\tChrome OS\t1","CHROMEOS\t2.4.11\tChrome OS\t1","CHROMEOS\t2.4.12\tChrome OS\t1","CHROMEOS\t2.4.13\tChrome OS\t1","CHROMEOS\t2.4.14\tChrome OS\t1","CHROMEOS\t2.4.15\tChrome OS\t1","CHROMEOS\t2.4.16\tChrome OS\t1","CHROMEOS\t2.4.17\tChrome OS\t1","CHROMEOS\t2.4.18\tChrome OS\t1","CHROMEOS\t2.4.19\tChrome OS\t1","CHROMEOS\t2.4.20\tChrome OS\t1","CHROMEOS\t2.4.21\tChrome OS\t1","CHROMEOS\t2.4.22\tChrome OS\t1","CHROMEOS\t2.4.23\tChrome OS\t1","CHROMEOS\t2.4.24\tChrome OS\t1","CHROMEOS\t2.4.25\tChrome OS\t1","CHROMEOS\t2.4.26\tChrome OS\t1","CHROMEOS\t2.4.27\tChrome OS\t1","CHROMEOS\t2.4.28\tChrome OS\t1","CHROMEOS\t2.4.29\tChrome OS\t1"]
+MYUAGENTLIST = ["Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36","Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.90 Safari/537.36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"]
 
 hostt = "https://api.chstore.me/v1"
 Access_key = "" # << input apikey here, get api key on https://api.chstore.me
@@ -42,13 +43,30 @@ def ConvPrim(token, header):
         raise Exception(resp["reason"])
     return resp["result"]
 
+def GenerateHeaders():
+    params = {"osname": statusalip["headers"], "apikey":Access_key}
+    resp = requests.session().get(hostt + "/lineappname_random", params=params).json()
+    if resp["status"] != 200:return 400, "Failed Generate Headers"
+    else:return 200, {"User-Agent": resp["result"]["User-Agent"], "X-Line-Application": resp["result"]["X-Line-Application"]}
 
-header = statusalip["headers"]
+
 if statusalip["assistSecondary"] == "":
-    token1 = ConvPrim(statusalip["assistToken"], header)
+    if statusalip["headersAssist"] == "":
+        returnCode, result = GenerateHeaders()
+        if returnCode == 200:
+            statusalip["headersAssist"] = result["X-Line-Application"]
+            statusalip["userAgentAssist"] = result["User-Agent"]
+        else:
+            statusalip["headersAssist"] = random.choice(MYAPPLIST)
+            statusalip["userAgentAssist"] = random.choice(MYUAGENTLIST)
+    token1 = ConvPrim(statusalip["assistToken"], statusalip["headersAssist"])
     statusalip["assistSecondary"] = token1
 
-alip = LINEBOT(myToken=str(statusalip["assistSecondary"]), myApp=header)
+alip = LINEBOT(
+    myToken=str(statusalip["assistSecondary"]),
+    myApp=statusalip["headersAssist"],
+    myUAgent=statusalip["userAgentAssist"]
+)
 
 alipMID = alip.profile.mid
 if alipMID:
@@ -61,9 +79,22 @@ ajs = alip
 
 if statusalip["ajsToken"] != "":
     if statusalip["ajsSecondary"] == "":
-        token2 = ConvPrim(statusalip["ajsToken"], header)
+        if statusalip["headersAjs"] == "":
+            returnCode, result = GenerateHeaders()
+            if returnCode == 200:
+                statusalip["headersAjs"] = result["X-Line-Application"]
+                statusalip["userAgentAjs"] = result["User-Agent"]
+            else:
+                statusalip["headersAjs"] = random.choice(MYAPPLIST)
+                statusalip["userAgentAjs"] = random.choice(MYUAGENTLIST)
+        token2 = ConvPrim(statusalip["ajsToken"], statusalip["headersAjs"])
         statusalip["ajsSecondary"] = token2
-    ajs = LINEBOT(myToken=str(statusalip["ajsSecondary"]), myApp=header, isAjs=True)
+    ajs = LINEBOT(
+        myToken=str(statusalip["ajsSecondary"]),
+        myApp=statusalip["headersAjs"],
+        myUAgent=statusalip["userAgentAjs"],
+        isAjs=True
+        )
     ajsMID = ajs.profile.mid
     if ajsMID:
         print("Success login AJS")
@@ -563,6 +594,7 @@ def RECEIVE_MESSAGE(op):
                         txt += "\n⌖ " + cooms + "nukejoin  <on/off>"
                         txt += "\n⌖ " + cooms + "silent <on/off>"
                         txt += "\n⌖ " + cooms + "nuke"
+                        txt += "\n⌖ " + cooms + "kill  <tag>"
                         txt += "\n⌖ " + cooms + "kick  <tag>"
                         txt += "\n⌖ " + cooms + "speed"
                         txt += "\n⌖ " + cooms + "out / out all"
@@ -878,7 +910,7 @@ def RECEIVE_MESSAGE(op):
                         else:
                             wait["keyCmd"] = str(key).lower()
                             alip.sendMessage(msg.to, "Key Added: {}".format(str(key)))
-                    elif cmd.startswith("kick "):
+                    elif cmd.startswith("kill "):
                         try:
                             key = eval(msg.contentMetadata["MENTION"])
                             key["MENTIONEES"][0]["M"]
@@ -890,6 +922,27 @@ def RECEIVE_MESSAGE(op):
                                 AddBlacklist(x["M"])
                             execute_js(nazwa)
                             time.sleep(0.8)
+                        except Exception as e:
+                            alip.sendMessage(to, str(e))
+                    elif cmd.startswith("kick "):
+                        try:
+                            key = eval(msg.contentMetadata["MENTION"])
+                            key["MENTIONEES"][0]["M"]
+                            for x in key["MENTIONEES"]:
+                                if x["M"] not in Blacklist:
+                                    AddBlacklist(x["M"])
+                                    try:
+                                        if x not in alip.FindDuplicatedAndRemove(
+                                            creator, owner, Bots
+                                            ):
+                                            if x["M"] in alipMID:
+                                                pass
+                                            else:
+                                                alip.deleteOtherFromChat(to, [x["M"]])
+                                        else:
+                                            alip.sendMessage(to, "Can't kick, user in creator, owner or Bots list")
+                                    except Exception as e:
+                                        alip.sendMessage(to, str(e))
                         except Exception as e:
                             alip.sendMessage(to, str(e))
                     elif cmd == "nuke":
