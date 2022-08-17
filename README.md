@@ -8,7 +8,7 @@
 
 
 # CL-Assist-Ajs-V2
-## Version 1.2.0
+## Version 1.3.0
 
 **Unoffcial LINE bot**. Using LINE private API for automate some task in LINE chat.
 
