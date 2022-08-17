@@ -10,7 +10,7 @@ import time, json, livejson, requests, os, random, ast, datetime, sys, concurren
 
 
 class LINEBOT:
-    def __init__(self, myToken, myApp, pool=False, isAjs=False):
+    def __init__(self, myToken, myApp, pool=False, isAjs=False, myUAgent=None):
         self.aliphost = "https://fxgrestapi.herokuapp.com"
         self.lineServer = "https://ga2.line.naver.jp"
         self.thisHeaders = {}
@@ -18,24 +18,27 @@ class LINEBOT:
         self.thisHeaders["x-line-access"] = myToken
         self.thisHeaders["x-line-application"] = myApp
         self.thisHeaders["x-lal"] = "en_id"
-        if splited[0] == "ANDROIDLITE":
-            self.thisHeaders["user-agent"] = "LLA/{} Mi5 {}".format(
-                splited[1], splited[3]
-            )
-        elif splited[0] == "CHROMEOS":
-            self.thisHeaders[
-                "user-agent"
-            ] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36"
-        elif splited[0] in ["IOS", "IOSIPAD"]:
-            self.thisHeaders["user-agent"] = "Line/{} Iphone8 {}".format(
-                splited[1], splited[3]
-            )
-        elif splited[0] == "CHANNELCP":
-            self.thisHeaders["user-agent"] = "LLA/{} SM-J320G {}".format(
-                splited[1], splited[3]
-            )
+        if myUAgent != None:
+            self.thisHeaders["User-Agent"] = myUAgent
         else:
-            self.thisHeaders["user-agent"] = "Line/{}".format(splited[1])
+            if splited[0] == "ANDROIDLITE":
+                self.thisHeaders["user-agent"] = "LLA/{} Mi5 {}".format(
+                    splited[1], splited[3]
+                )
+            elif splited[0] == "CHROMEOS":
+                self.thisHeaders[
+                    "user-agent"
+                ] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36"
+            elif splited[0] in ["IOS", "IOSIPAD"]:
+                self.thisHeaders["user-agent"] = "Line/{} Iphone8 {}".format(
+                    splited[1], splited[3]
+                )
+            elif splited[0] == "CHANNELCP":
+                self.thisHeaders["user-agent"] = "LLA/{} SM-J320G {}".format(
+                    splited[1], splited[3]
+                )
+            else:
+                self.thisHeaders["user-agent"] = "Line/{}".format(splited[1])
         self.talk = self.openTransport("/S4")
         self.polling = self.openTransport("/P4")
         self.profile = self.getProfile()
