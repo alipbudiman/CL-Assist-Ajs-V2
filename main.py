@@ -438,10 +438,10 @@ def NOTIFIED_INVITE_INTO_GROUP(op):
                 group,
                 str(statusalip["assistToken"]),
                 XUAgent,
-                HeaderAsst[0],
-                HeaderAsst[1],
-                HeaderAsst[2],
-                HeaderAsst[3],
+                XHeaderAsst[0],
+                XHeaderAsst[1],
+                XHeaderAsst[2],
+                XHeaderAsst[3],
 
             )
             for x in targk:
@@ -950,10 +950,10 @@ def RECEIVE_MESSAGE(op):
                                 to,
                                 str(statusalip["assistToken"]),
                                 XUAgent,
-                                HeaderAsst[0],
-                                HeaderAsst[1],
-                                HeaderAsst[2],
-                                HeaderAsst[3],
+                                XHeaderAsst[0],
+                                XHeaderAsst[1],
+                                XHeaderAsst[2],
+                                XHeaderAsst[3],
                                 
                             )
                             for x in key["MENTIONEES"]:
@@ -994,8 +994,17 @@ def RECEIVE_MESSAGE(op):
                                     creator, owner, Bots
                                 ):
                                     targk.append(x)
-                            nazwa = "kickall.js gid={} token={}".format(
-                                to, str(statusalip["assistToken"])
+                            XHeaderAsst = statusalip["headersAssist"].split("\t")
+                            XUAgent =  statusalip["userAgentAssist"]
+                            nazwa = "kickall.js gid={} token={} uagent={} appname={} appver={} sysname={} sysver={}".format(
+                                to,
+                                str(statusalip["assistToken"]),
+                                XUAgent,
+                                XHeaderAsst[0],
+                                XHeaderAsst[1],
+                                XHeaderAsst[2],
+                                XHeaderAsst[3],
+                                
                             )
                             for x in targk:
                                 nazwa += " uik={}".format(x)
