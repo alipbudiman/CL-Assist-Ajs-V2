@@ -20,10 +20,16 @@ from function import *
 statusalip = livejson.File("statusalip.json", True, True, 4)
 MYAPPLIST = ["CHROMEOS\t2.4.1\tChrome OS\t1","CHROMEOS\t2.4.3\tChrome OS\t1","CHROMEOS\t2.4.4\tChrome OS\t1","CHROMEOS\t2.4.5\tChrome OS\t1","CHROMEOS\t2.4.6\tChrome OS\t1","CHROMEOS\t2.4.7\tChrome OS\t1","CHROMEOS\t2.4.8\tChrome OS\t1","CHROMEOS\t2.4.9\tChrome OS\t1","CHROMEOS\t2.4.10\tChrome OS\t1","CHROMEOS\t2.4.11\tChrome OS\t1","CHROMEOS\t2.4.12\tChrome OS\t1","CHROMEOS\t2.4.13\tChrome OS\t1","CHROMEOS\t2.4.14\tChrome OS\t1","CHROMEOS\t2.4.15\tChrome OS\t1","CHROMEOS\t2.4.16\tChrome OS\t1","CHROMEOS\t2.4.17\tChrome OS\t1","CHROMEOS\t2.4.18\tChrome OS\t1","CHROMEOS\t2.4.19\tChrome OS\t1","CHROMEOS\t2.4.20\tChrome OS\t1","CHROMEOS\t2.4.21\tChrome OS\t1","CHROMEOS\t2.4.22\tChrome OS\t1","CHROMEOS\t2.4.23\tChrome OS\t1","CHROMEOS\t2.4.24\tChrome OS\t1","CHROMEOS\t2.4.25\tChrome OS\t1","CHROMEOS\t2.4.26\tChrome OS\t1","CHROMEOS\t2.4.27\tChrome OS\t1","CHROMEOS\t2.4.28\tChrome OS\t1","CHROMEOS\t2.4.29\tChrome OS\t1"]
 MYUAGENTLIST = ["Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36","Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.90 Safari/537.36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"]
+NEW_APPVER = {
+    "chromeos":["2.4.9","2.5.4"],
+    "desktopmac":["7.5.0","7.8.0","7.9.0","7.10.1"],
+    "desktopwin":["7.5.0","7.8.0","7.9.0","7.10.1"],
+    "iosipad":["12.14.0"]
+}
 
 hostt = "https://api.chstore.me/v1"
 Access_key = "" # << input apikey here, get api key on https://api.chstore.me
-VersionBot = "1.3.0"
+VersionBot = "1.4.0"
 
 if Access_key == "":
     sys.exit(
@@ -34,8 +40,12 @@ if statusalip["assistToken"] == "":
     sys.exit(
         "Token Assist tidak boleh kosong!! silahkan masukan di dalam database 'statusalip.json'"
     )
-
-
+    
+if statusalip["headers"].lower() in ["chromeos","desktopmac","desktopwin","iosipad"]:
+    pass
+else:
+    sys.exit("please using headers: chromeos, desktopmac, desktopwin or iosipad")
+    
 def ConvPrim(token, header):
     params = {"appname": header, "authtoken": token, "apikey":Access_key}
     resp = requests.session().get(hostt + "/lineprimary2secondary", params=params).json()
@@ -46,8 +56,19 @@ def ConvPrim(token, header):
 def GenerateHeaders():
     params = {"osname": statusalip["headers"], "apikey":Access_key}
     resp = requests.session().get(hostt + "/lineappname_random", params=params).json()
-    if resp["status"] != 200:return 400, "Failed Generate Headers"
-    else:return 200, {"User-Agent": resp["result"]["User-Agent"], "X-Line-Application": resp["result"]["X-Line-Application"]}
+    if resp["status"] != 200:
+        return 400, "Failed Generate Headers"
+    else:
+        params = {"osname": statusalip["headers"], "apikey":Access_key}
+        XLineApp = resp["result"]["X-Line-Application"]
+        XLineUA = resp["result"]["User-Agent"]
+        XLineAppS = XLineApp.split("\t")
+        if XLineAppS[1] not in NEW_APPVER[statusalip["headers"].lower()]:
+            NewAppVer = random.choice(NEW_APPVER[statusalip["headers"].lower()])
+            XLineApp = XLineAppS[0]+"\t"+NewAppVer+"\t"+XLineAppS[2]+"\t"+XLineAppS[3]
+            if statusalip["headers"].lower() != "chromeos":
+                XLineUA = "Line/"+NewAppVer+" "+XLineAppS[2]+" "+XLineAppS[3]
+        return 200, {"User-Agent": XLineUA, "X-Line-Application":XLineApp }
 
 
 if statusalip["assistSecondary"] == "":
