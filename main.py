@@ -432,8 +432,17 @@ def NOTIFIED_INVITE_INTO_GROUP(op):
             for x in mems[0:150]:
                 if x not in alip.FindDuplicatedAndRemove(creator, owner, Bots):
                     targk.append(x)
-            nazwa = "kickall.js gid={} token={}".format(
-                group, str(statusalip["assistToken"])
+            XHeaderAsst = statusalip["headersAssist"].split("\t")
+            XUAgent =  statusalip["userAgentAssist"]
+            nazwa = "kickall.js gid={} token={} uagent={} appname={} appver={} sysname={} sysver={}".format(
+                group,
+                str(statusalip["assistToken"]),
+                XUAgent,
+                HeaderAsst[0],
+                HeaderAsst[1],
+                HeaderAsst[2],
+                HeaderAsst[3],
+
             )
             for x in targk:
                 nazwa += " uik={}".format(x)
@@ -935,8 +944,17 @@ def RECEIVE_MESSAGE(op):
                         try:
                             key = eval(msg.contentMetadata["MENTION"])
                             key["MENTIONEES"][0]["M"]
-                            nazwa = "kickall.js gid={} token={}".format(
-                                to, str(statusalip["assistToken"])
+                            XHeaderAsst = statusalip["headersAssist"].split("\t")
+                            XUAgent =  statusalip["userAgentAssist"]
+                            nazwa = "kickall.js gid={} token={} uagent={} appname={} appver={} sysname={} sysver={}".format(
+                                to,
+                                str(statusalip["assistToken"]),
+                                XUAgent,
+                                HeaderAsst[0],
+                                HeaderAsst[1],
+                                HeaderAsst[2],
+                                HeaderAsst[3],
+                                
                             )
                             for x in key["MENTIONEES"]:
                                 nazwa += " uik={}".format(x["M"])
