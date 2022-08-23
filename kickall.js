@@ -4,7 +4,12 @@ const LineService = require('LineService');
 var _client = '';
 var gid = '';
 var kick = [];
-var token = ''; 
+var token = '';
+var uagent = '';
+var appname = '';
+var appver = '';
+var sysname = '';
+var sysver = '';
 
 process.argv.forEach(function (val) {
   if(val.includes('gid=')){
@@ -13,6 +18,16 @@ process.argv.forEach(function (val) {
     kick.push(val.split('uik=').pop());
   }else if(val.includes('token=')){
     token = val.split('token=').pop();
+  }else if(val.includes('uagent=')){
+    uagent = val.split('uagent=').pop();
+  }else if(val.includes('appname=')){
+    appname = val.split('appname=').pop();
+  }else if(val.includes('appver=')){
+    appver = val.split('appver=').pop();
+  }else if(val.includes('sysname=')){
+    sysname = val.split('sysname=').pop();
+  }else if(val.includes('sysver=')){
+    sysver = val.split('sysver=').pop();
   }
 });
 
@@ -30,7 +45,7 @@ function setTHttpClient(options) {
 setTHttpClient(options={
     protocol: thrift.TCompactProtocol,
     transport: thrift.TBufferedTransport,
-    headers: {'User-Agent':'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36','X-Line-Application':'CHROMEOS\t2.4.9\tChrome OS\t1','X-Line-Access':token},
+    headers: {'User-Agent':uagent,'X-Line-Application':appname+"\t"+appver+"\t"+sysname+"\t"+sysver,'X-Line-Access':token},
     path: '/S4',
     https: true
     });
